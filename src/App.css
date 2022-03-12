@@ -9,22 +9,25 @@
   text-align: center;
 }
 
+
 .header {
-grid-area: h;
-background-color: blueviolet;
-}
+  grid-area: h;
+  background-color: blueviolet;
+  }
 
 .nav {
-grid-area: n;
-background-color: brown;
-}
+    grid-area: n;
+    background-color: brown;
+    }
 
-.content {
-grid-area: c;
-background-color: beige;
-}
+
 
 .footer {
-grid-area: f;
-background-color: blanchedalmond;
-}
+      grid-area: f;
+      background-color: blanchedalmond;
+      }
+      
+.content {
+        grid-area: c;
+        background-color: beige;
+        }
