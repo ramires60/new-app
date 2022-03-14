@@ -8,14 +8,14 @@ import Profile from './Profile/Profile';
 
 
 
-const Content = () => {
+const Content = (props) => {
     
     return (
         <div>
 
             <Routes>
-                <Route path='/messages' element={<Dialogs/>}/>
-                <Route path='/profile' element={<Profile/>}/>
+                <Route path='/messages' element={<Dialogs messagesData={props.messagesData} dialogsData={props.dialogsData}/>}/>
+                <Route path='/profile' element={<Profile postsData={props.postsData}/>}/>
                 <Route path='*' element={<NotFound/>}/>
 
             </Routes>
