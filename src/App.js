@@ -12,7 +12,13 @@ const App = (props) => {
     <div className="App">
       <header className='header'> <Header /> </header>
       <nav className='nav'> <Sidebar /> </nav>
-      <div className='content'><Content postsData={props.postsData} messagesData={props.messagesData} dialogsData={props.dialogsData}/></div>
+      <div className='content'><Content
+                              postsData={props.postsData}
+                              messagesData={props.messagesData}
+                              dialogsData={props.dialogsData}
+                              addPost={props.addPost}
+                              newPostText={props.newPostText}
+                              updateNewPostText={props.updateNewPostText}/></div>
       <div className='footer'><Footer /></div>
    
     </div>

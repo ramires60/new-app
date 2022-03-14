@@ -2,16 +2,26 @@ import React from 'react';
 import css from './AddPost.module.css'
 
 
-const AddPost = () => {
+const AddPost = (props) => {
     let newPostElement = React.createRef()
     let addPost = () => {
+    
+        props.addPost()
+        props.updateNewPostText('')
+        }
+    
+    let onPostChange = () => {
         let text = newPostElement.current.value;
-        alert(text) }
+        props.updateNewPostText(text)
+        
+
+    }
 
  
     return (
         <div>
-            <textarea ref={newPostElement}></textarea>
+            <textarea onChange={onPostChange} ref={newPostElement}
+            value={props.newPostText}/>
             <button onClick={addPost}>Add new Post</button>
 
         </div>

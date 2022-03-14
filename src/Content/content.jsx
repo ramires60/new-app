@@ -15,7 +15,12 @@ const Content = (props) => {
 
             <Routes>
                 <Route path='/messages' element={<Dialogs messagesData={props.messagesData} dialogsData={props.dialogsData}/>}/>
-                <Route path='/profile' element={<Profile postsData={props.postsData}/>}/>
+                <Route path='/profile' element={<Profile 
+                postsData={props.postsData}
+                addPost={props.addPost}
+                newPostText={props.newPostText}
+                updateNewPostText={props.updateNewPostText}
+                />}/>
                 <Route path='*' element={<NotFound/>}/>
 
             </Routes>

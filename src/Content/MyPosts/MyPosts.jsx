@@ -14,7 +14,9 @@ const MyPosts = (props) => {
 
     return (<div>
         <div>My Posts</div>
-        <AddPost/>
+        <AddPost addPost={props.addPost}
+        newPostText={props.newPostText}
+        updateNewPostText={props.updateNewPostText}/>
         {PostArray}
         
          </div>
